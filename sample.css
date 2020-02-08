@@ -149,15 +149,6 @@ p {
 	widows: 2;
 }
 
-p:first-of-type {
-	text-indent: 0;
-}
-p:first-of-type::first-letter {
-	font-weight: bold;
-	font-size: 1.8em;
-	line-height: 1;
-	padding-right: 1px
-}
 main > section:last-child::after {
 	break-before: avoid;
 	break-inside: avoid;
@@ -180,4 +171,46 @@ pre {
 	white-space: pre-wrap;
 	line-height: 1.45;
 	hyphens: none;
+}
+
+section#colophon {
+	position: relative;
+	float-reference: page;
+	float: bottom;
+	margin-bottom: 0;
+}
+
+section#colophon ul {
+	font-size: 1em
+}
+
+section#colophon ul.editions {
+	padding: 0;
+	list-style: none;
+  }
+  
+section#colophon ul.editions time {
+	display: inline-block;
+	width: 10em;
+}
+  
+section#colophon table.info {
+	margin: 0;
+	width: 100%;
+	border-top: 2px solid currentColor;
+}
+  
+section#colophon table.info tr {
+	border: 0;
+	box-shadow: none;
+}
+  
+section#colophon table.info tr:last-child {
+	border-bottom: 1px solid currentColor;
+}
+  
+section#colophon table.info td {
+	vertical-align: top;
+	padding-left: 0;
+	font-size: 1em;
 }
